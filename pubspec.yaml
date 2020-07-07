@@ -1,0 +1,59 @@
+name: flower_bucket
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.12.0
+  cupertino_icons: ^0.1.3
+  shared_preferences: ^0.5.6+3
+  crypto: ^2.1.5
+  dropdownfield: ^1.0.3
+  flutter_slidable: ^0.5.4
+  generic_bloc_provider: ^1.0.9
+  device_info: ^0.3.0
+  url_launcher: ^5.4.11
+  string_validator: ^0.1.4
+  flutter_rollbar: ^0.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^1.6.2
+  build_web_compilers: ^2.0.0
+    
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: NunitoSans
+      fonts:
+        - asset: assets/fonts/NunitoSans/NunitoSans-Regular.ttf
+        - asset: assets/fonts/NunitoSans/NunitoSans-Italic.ttf
+          style: italic
+        - asset: assets/fonts/NunitoSans/NunitoSans-Bold.ttf
+          weight: 700
+
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito/Nunito-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Nunito/Nunito-Bold.ttf
+          weight: 700
+
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
