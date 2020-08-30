@@ -1,10 +1,10 @@
+import 'package:flower_bucket/Screens/bibliography.dart';
 import 'package:flower_bucket/Widgets/normal_text.dart';
 import 'package:flower_bucket/Widgets/title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-Drawer buildDrawer(
-    {@required BuildContext context}) {
+Drawer buildDrawer({@required BuildContext context}) {
   return Drawer(
     child: ListView(
       padding: EdgeInsets.zero,
@@ -21,23 +21,20 @@ Drawer buildDrawer(
         ),
         ListTile(
           title: NormalText('Listado de precios'),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: NormalText('Glosario'),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: NormalText('Créditos'),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: NormalText('Bibliografía'),
           onTap: () {
-            launchURL();
+            navigateTo(context, BibliographyScreen.routeName);
           },
         ),
         Divider(
@@ -45,40 +42,26 @@ Drawer buildDrawer(
         ),
         ListTile(
           title: NormalText('¿Cómo usar la app?'),
-          onTap: () {
-          },
+          onTap: () {},
         ),
-        
         Divider(
           color: Theme.of(context).disabledColor,
         ),
         ListTile(
           title: NormalText('Información del herbario'),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: NormalText('Información de la universidad'),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: NormalText('Contacto'),
-          onTap: () {
-          },
+          onTap: () {},
         )
       ],
     ),
   );
-}
-
-launchURL() async {
-  const url = 'https://console.drivebusinessintelligence.com/reset_password.php';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 removeAllOfNavigatorAndPush(BuildContext context, String routeName) {
